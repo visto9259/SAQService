@@ -1,0 +1,12 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"SAQService\\" : "src"
+		}
+	},
+	"name" : "visto9259/SAQService",
+	"type" : "library",
+	"require" : {
+		"php" : ">=5.6"
+	}
+}
