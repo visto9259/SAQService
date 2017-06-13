@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://mobile.saq.com/" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:saq="http://mobile.saq.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+   <xsd:include schemaLocation="../Resources/Nouns/ServiceMobile.xsd"/>
+
+   <xsd:complexType name="SyncGetDetailProduitDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailProduit"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailProduitParCUPDataAreaType">
+      <xsd:sequence>
+         <xsd:element ref="saq:getDetailProduitParCUP"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailProduitType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailProduitDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailProduit" type="saq:SyncGetDetailProduitType"/>
+
+   <xsd:complexType name="SyncGetDetailProduitParCUPType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailProduitParCUPDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailProduitParCUP" type="saq:SyncGetDetailProduitParCUPType"/>
+
+
+   <xsd:complexType name="SyncGetDetailProduitParCUPResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailProduitParCUPResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailProduitParCUPResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailProduitParCUPResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailProduitParCUPResponse" type="saq:SyncGetDetailProduitParCUPResponseType"/>
+
+   <xsd:complexType name="SyncGetDetailProduitResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailProduitResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailProduitResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailProduitResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailProduitResponse" type="saq:SyncGetDetailProduitResponseType"/>
+
+   <xsd:complexType name="SyncGetDetailRecetteDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailRecette"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailRecetteType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailRecetteDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailRecette" type="saq:SyncGetDetailRecetteType"/>
+
+   <xsd:complexType name="SyncGetDetailRecetteResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailRecetteResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailRecetteResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailRecetteResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailRecetteResponse" type="saq:SyncGetDetailRecetteResponseType"/>
+
+   <xsd:complexType name="SyncGetListeCategoriesDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getListeCategories"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetListeCategoriesType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetListeCategoriesDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetListeCategories" type="saq:SyncGetListeCategoriesType"/>
+
+   <xsd:complexType name="SyncGetListeCategoriesResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getListeCategoriesResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetListeCategoriesResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetListeCategoriesResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetListeCategoriesResponse" type="saq:SyncGetListeCategoriesResponseType"/>
+
+   <xsd:complexType name="SyncGetListeCepagesDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getListeCepages"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetListeCepagesType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetListeCepagesDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetListeCepages" type="saq:SyncGetListeCepagesType"/>
+
+   <xsd:complexType name="SyncGetListeCepagesResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getListeCepagesResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetListeCepagesResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetListeCepagesResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetListeCepagesResponse" type="saq:SyncGetListeCepagesResponseType"/>
+
+   <xsd:complexType name="SyncGetListePastillesDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getListePastilles"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetListePastillesType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetListePastillesDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetListePastilles" type="saq:SyncGetListePastillesType"/>
+
+   <xsd:complexType name="SyncGetListePastillesResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getListePastillesResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetListePastillesResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetListePastillesResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetListePastillesResponse" type="saq:SyncGetListePastillesResponseType"/>
+
+   <xsd:complexType name="SyncGetListePaysDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getListePays"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetListePaysType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetListePaysDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetListePays" type="saq:SyncGetListePaysType"/>
+
+   <xsd:complexType name="SyncGetListePaysResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getListePaysResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetListePaysResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetListePaysResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetListePaysResponse" type="saq:SyncGetListePaysResponseType"/>
+
+   <xsd:complexType name="SyncGetListePrixDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getListePrix"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetListePrixType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetListePrixDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetListePrix" type="saq:SyncGetListePrixType"/>
+
+   <xsd:complexType name="SyncGetListePrixResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getListePrixResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetListePrixResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetListePrixResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetListePrixResponse" type="saq:SyncGetListePrixResponseType"/>
+
+   <xsd:complexType name="SyncGetListeTypesPlatDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getListeTypesPlat"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetListeTypesPlatType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetListeTypesPlatDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetListeTypesPlat" type="saq:SyncGetListeTypesPlatType"/>
+
+   <xsd:complexType name="SyncGetListeTypesPlatResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getListeTypesPlatResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetListeTypesPlatResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetListeTypesPlatResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetListeTypesPlatResponse" type="saq:SyncGetListeTypesPlatResponseType"/>
+
+
+   <xsd:complexType name="SyncGetProduitsDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getProduits"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetProduitsDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetProduits" type="saq:SyncGetProduitsType"/>
+
+   <xsd:complexType name="SyncGetProduitsParAccordDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getProduitsParAccord"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsParAccordType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetProduitsParAccordDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetProduitsParAccord" type="saq:SyncGetProduitsParAccordType"/>
+
+   <xsd:complexType name="SyncGetProduitsParAccordResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getProduitsParAccordResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsParAccordResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetProduitsParAccordResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetProduitsParAccordResponse" type="saq:SyncGetProduitsParAccordResponseType"/>
+
+   <xsd:complexType name="SyncGetProduitsParMotCleDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getProduitsParMotCle"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsParMotCleType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetProduitsParMotCleDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetProduitsParMotCle" type="saq:SyncGetProduitsParMotCleType"/>
+
+   <xsd:complexType name="SyncGetProduitsParMotCleResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getProduitsParMotCleResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsParMotCleResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetProduitsParMotCleResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetProduitsParMotCleResponse" type="saq:SyncGetProduitsParMotCleResponseType"/>
+
+   <xsd:complexType name="SyncGetProduitsResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getProduitsResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetProduitsResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetProduitsResponse" type="saq:SyncGetProduitsResponseType"/>
+
+   <xsd:complexType name="SyncGetRecettesDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getRecettes"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetRecettesType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetRecettesDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetRecettes" type="saq:SyncGetRecettesType"/>
+
+   <xsd:complexType name="SyncGetRecettesParAccordDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getRecettesParAccord"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetRecettesParAccordType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetRecettesParAccordDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetRecettesParAccord" type="saq:SyncGetRecettesParAccordType"/>
+
+   <xsd:complexType name="SyncGetRecettesParAccordResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getRecettesParAccordResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetRecettesParAccordResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetRecettesParAccordResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetRecettesParAccordResponse" type="saq:SyncGetRecettesParAccordResponseType"/>
+
+   <xsd:complexType name="SyncGetRecettesResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getRecettesResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetRecettesResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetRecettesResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetRecettesResponse" type="saq:SyncGetRecettesResponseType"/>
+
+   <xsd:complexType name="SyncGetSuccursalesDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getSuccursales"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetSuccursalesType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetSuccursalesDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetSuccursales" type="saq:SyncGetSuccursalesType"/>
+
+   <xsd:complexType name="SyncGetSuccursalesResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getSuccursalesResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetSuccursalesResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetSuccursalesResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetSuccursalesResponse" type="saq:SyncGetSuccursalesResponseType"/>
+
+   <xsd:complexType name="SyncGetMessageDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getMessage"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetMessageType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetMessageDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetMessage" type="saq:SyncGetMessageType"/>
+
+   <xsd:complexType name="SyncGetMessageResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getMessageResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetMessageResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetMessageResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetMessageResponse" type="saq:SyncGetMessageResponseType"/>
+
+   <xsd:complexType name="SyncGetDetailsSuccursaleDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailsSuccursale"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailsSuccursaleType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailsSuccursaleDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailsSuccursale" type="saq:SyncGetDetailsSuccursaleType"/>
+
+   <xsd:complexType name="SyncGetDetailsSuccursaleResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailsSuccursaleResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailsSuccursaleResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailsSuccursaleResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailsSuccursaleResponse" type="saq:SyncGetDetailsSuccursaleResponseType"/>
+
+   <xsd:element name="SyncGetProduitsParMotCleV2" type="saq:SyncGetProduitsParMotCleV2Type"/>
+
+   <xsd:complexType name="SyncGetProduitsParMotCleV2Type">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetProduitsParMotCleV2DataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsParMotCleV2DataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getProduitsParMotCleV2"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsParMotCleV2ResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getProduitsParMotCleV2Response"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsParMotCleV2ResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetProduitsParMotCleV2ResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetProduitsParMotCleV2Response" type="saq:SyncGetProduitsParMotCleV2ResponseType"/>
+
+   <xsd:complexType name="SyncGetDetailProduitParCUPV2ResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailProduitParCUPV2Response"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailProduitParCUPV2ResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailProduitParCUPV2ResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailProduitParCUPV2Response" type="saq:SyncGetDetailProduitParCUPV2ResponseType"/>
+
+   <xsd:complexType name="SyncGetDetailProduitV2ResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailProduitV2Response"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailProduitV2ResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailProduitV2ResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailProduitV2Response" type="saq:SyncGetDetailProduitV2ResponseType"/>
+
+   <xsd:complexType name="SyncGetDetailProduitV2DataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailProduitV2"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailProduitV2Type">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailProduitV2DataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailProduitV2" type="saq:SyncGetDetailProduitV2Type"/>
+
+   <xsd:complexType name="SyncGetDetailProduitParCUPV2Type">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailProduitParCUPV2DataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailProduitParCUPV2" type="saq:SyncGetDetailProduitParCUPV2Type"/>
+
+   <xsd:complexType name="SyncGetDetailProduitParCUPV2DataAreaType">
+      <xsd:sequence>
+         <xsd:element ref="saq:getDetailProduitParCUPV2"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsV2DataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getProduitsV2"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsV2Type">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetProduitsV2DataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetProduitsV2" type="saq:SyncGetProduitsV2Type"/>
+
+   <xsd:complexType name="SyncGetProduitsV2ResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getProduitsV2Response"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsV2ResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetProduitsV2ResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetProduitsV2Response" type="saq:SyncGetProduitsV2ResponseType"/>
+   
+   <xsd:complexType name="SyncGetProduitsParAccordV2DataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getProduitsParAccordV2"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsParAccordV2Type">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetProduitsParAccordV2DataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetProduitsParAccordV2" type="saq:SyncGetProduitsParAccordV2Type"/>
+
+   <xsd:complexType name="SyncGetProduitsParAccordV2ResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getProduitsParAccordV2Response"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetProduitsParAccordV2ResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetProduitsParAccordV2ResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetProduitsParAccordV2Response" type="saq:SyncGetProduitsParAccordV2ResponseType"/>
+   
+   <xsd:complexType name="SyncGetRecettesV2DataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getRecettesV2"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetRecettesV2Type">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetRecettesV2DataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetRecettesV2" type="saq:SyncGetRecettesV2Type"/>
+
+   <xsd:complexType name="SyncGetRecettesParAccordV2DataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getRecettesParAccordV2"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetRecettesParAccordV2Type">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetRecettesParAccordV2DataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetRecettesParAccordV2" type="saq:SyncGetRecettesParAccordV2Type"/>
+
+   <xsd:complexType name="SyncGetRecettesParAccordV2ResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getRecettesParAccordV2Response"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetRecettesParAccordV2ResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetRecettesParAccordV2ResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetRecettesParAccordV2Response" type="saq:SyncGetRecettesParAccordV2ResponseType"/>
+
+   <xsd:complexType name="SyncGetRecettesV2ResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getRecettesV2Response"/>
+      </xsd:sequence>
+   </xsd:complexType>
+  
+   <xsd:complexType name="SyncGetRecettesV2ResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetRecettesV2ResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetRecettesV2Response" type="saq:SyncGetRecettesV2ResponseType"/>
+
+    <!-- V3 start here -->
+    
+    <xsd:complexType name="SyncGetDetailProduitParCUPV3ResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailProduitParCUPV3Response"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailProduitParCUPV3ResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailProduitParCUPV3ResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailProduitParCUPV3Response" type="saq:SyncGetDetailProduitParCUPV3ResponseType"/>
+
+   <xsd:complexType name="SyncGetDetailProduitV3ResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailProduitV3Response"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailProduitV3ResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailProduitV3ResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailProduitV3Response" type="saq:SyncGetDetailProduitV3ResponseType"/>
+
+   <xsd:complexType name="SyncGetDetailProduitV3DataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getDetailProduitV3"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetDetailProduitV3Type">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailProduitV3DataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailProduitV3" type="saq:SyncGetDetailProduitV3Type"/>
+
+   <xsd:complexType name="SyncGetDetailProduitParCUPV3Type">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetDetailProduitParCUPV3DataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetDetailProduitParCUPV3" type="saq:SyncGetDetailProduitParCUPV3Type"/>
+
+   <xsd:complexType name="SyncGetDetailProduitParCUPV3DataAreaType">
+      <xsd:sequence>
+         <xsd:element ref="saq:getDetailProduitParCUPV3"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   
+   <xsd:complexType name="SyncGetImageURLDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getImageURL"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetImageURLType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetImageURLDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetImageURL" type="saq:SyncGetImageURLType"/>
+
+   <xsd:complexType name="SyncGetImageURLResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getImageURLResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetImageURLResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetImageURLResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetImageURLResponse" type="saq:SyncGetImageURLResponseType"/>
+   
+   <xsd:complexType name="SyncGetPromotionDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getPromotion"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetPromotionType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetPromotionDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetPromotion" type="saq:SyncGetPromotionType"/>
+
+   <xsd:complexType name="SyncGetPromotionResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getPromotionResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetPromotionResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetPromotionResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetPromotionResponse" type="saq:SyncGetPromotionResponseType"/>
+   
+   <xsd:complexType name="SyncGetLegalInfosDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getLegalInfos"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetLegalInfosType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetLegalInfosDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetLegalInfos" type="saq:SyncGetLegalInfosType"/>
+
+   <xsd:complexType name="SyncGetLegalInfosResponseDataAreaType">
+      <xsd:sequence>
+         <xsd:element maxOccurs="1" ref="saq:getLegalInfosResponse"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="SyncGetLegalInfosResponseType">
+      <xsd:sequence>
+         <xsd:element name="DataArea" type="saq:SyncGetLegalInfosResponseDataAreaType"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:element name="SyncGetLegalInfosResponse" type="saq:SyncGetLegalInfosResponseType"/>
+
+</xsd:schema>

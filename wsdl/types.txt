@@ -1,0 +1,779 @@
+SAQ Robot, version 0.0.1
+
+SAQ Web Service Types:
+struct getListePrix {
+}
+struct getListePrixResponse {
+ prix return;
+}
+struct prix {
+}
+struct reference {
+ string descEn;
+ string descrFr;
+}
+struct referenceAvecId {
+ string descEn;
+ string descrFr;
+ string id;
+ string categoryId;
+}
+struct getDetailProduit {
+ string arg0;
+ long arg1;
+}
+struct getDetailProduitResponse {
+ detailProduit return;
+}
+struct detailProduit {
+ attribute listeAttributs;
+}
+struct produit {
+ string format;
+ string identiteProduit;
+ string millesime;
+ string pastilleGout;
+ string pays;
+ decimal prix;
+ decimal prixReduit;
+ string urlPastille;
+ string quantiteParEmballage;
+ string aromate;
+ string urlAromate;
+ string typeSpiritueux;
+ string urlTypeSpiritueux;
+}
+struct result {
+ string description;
+ string familleAccordList;
+ long id;
+ string partNumber;
+}
+struct attribute {
+ typeAttribut typeAttribut;
+ string value;
+}
+struct getProduitsParAccord {
+ string arg0;
+ string arg1;
+ long arg2;
+ long arg3;
+}
+struct getProduitsParAccordResponse {
+ listeProduit return;
+}
+struct listeProduit {
+ produit products;
+}
+struct listeResultat {
+ long nbPages;
+ long nbResultsPerPage;
+}
+struct getProduits {
+ string arg0;
+ string arg1;
+ string arg2;
+ string arg3;
+ string arg4;
+ string arg5;
+ string arg6;
+ string arg7;
+ boolean arg8;
+ string arg9;
+ long arg10;
+ long arg11;
+}
+struct getProduitsResponse {
+ listeProduit return;
+}
+struct getProduitsParMotCle {
+ string arg0;
+ string arg1;
+ long arg2;
+ long arg3;
+}
+struct getProduitsParMotCleResponse {
+ listeProduit return;
+}
+struct getDetailRecette {
+ string arg0;
+ long arg1;
+}
+struct getDetailRecetteResponse {
+ detailRecette return;
+}
+struct detailRecette {
+ string ingredientEtInstructions;
+ attribute listeAttributs;
+}
+struct recette {
+ string urlPhoto;
+}
+struct getRecettesParAccord {
+ string arg0;
+ string arg1;
+ long arg2;
+ long arg3;
+}
+struct getRecettesParAccordResponse {
+ listeRecette return;
+}
+struct listeRecette {
+ recette recipes;
+}
+struct getListeCategories {
+}
+struct getListeCategoriesResponse {
+ categorie return;
+}
+struct categorie {
+ categorie sousCategorie;
+}
+struct getListeCepages {
+}
+struct getListeCepagesResponse {
+ cepage return;
+}
+struct cepage {
+}
+struct getSuccursales {
+ string arg0;
+ long arg1;
+}
+struct getSuccursalesResponse {
+ succursale return;
+}
+struct succursale {
+ string adresse;
+ string banniere;
+ decimal latitude;
+ decimal longitude;
+ int nbProduit;
+ string region;
+ long succursaleId;
+ string telephone;
+ string ville;
+}
+struct getListeTypesPlat {
+}
+struct getListeTypesPlatResponse {
+ typePlat return;
+}
+struct typePlat {
+ ingredient ingredientsPrincipaux;
+}
+struct ingredient {
+ reference listeAccompagnement;
+ reference listeModeCuisson;
+}
+struct getListePastilles {
+}
+struct getListePastillesResponse {
+ pastille return;
+}
+struct pastille {
+ reference pastilleDescCourte;
+ reference pastilleDescLongue;
+ reference pastilleUrl;
+ reference categorie;
+}
+struct getRecettes {
+ string arg0;
+ string arg1;
+ string arg2;
+ string arg3;
+ string arg4;
+ long arg5;
+ long arg6;
+}
+struct getRecettesResponse {
+ listeRecette return;
+}
+struct getDetailProduitParCUP {
+ string arg0;
+ string arg1;
+}
+struct getDetailProduitParCUPResponse {
+ detailProduit return;
+}
+struct getListePays {
+}
+struct getListePaysResponse {
+ pays return;
+}
+struct pays {
+ reference regions;
+}
+struct getMessage {
+}
+struct getMessageResponse {
+ message return;
+}
+struct message {
+ string forversion;
+ date dateDebut;
+ date dateFin;
+}
+struct getImageURL {
+}
+struct getImageURLResponse {
+ string imageURL;
+}
+struct getPromotion {
+ string plateforme;
+ string versionApp;
+}
+struct getPromotionResponse {
+ promotion return;
+}
+struct promotion {
+ string id;
+ date dateDebut;
+ date dateFin;
+ reference urlImage;
+ contenu contenu;
+}
+struct contenu {
+ reference pageStatique;
+ produitPromotion produits;
+}
+struct produitPromotion {
+ identiteProduit identiteProduit;
+ int nbResults;
+}
+struct identiteProduit {
+ string idProduit;
+}
+struct getLegalInfos {
+}
+struct getLegalInfosResponse {
+ legalInfos return;
+}
+struct legalInfos {
+ string id;
+ reference titre;
+ contenu contenu;
+}
+struct contenu {
+ reference urlInfos;
+ reference description;
+ string noTel;
+ string courriel;
+}
+string typeAttribut
+struct getDetailsSuccursale {
+ string lang;
+ long id;
+}
+struct getDetailsSuccursaleResponse {
+ detailsSuccursale return;
+}
+struct detailsSuccursale {
+ string adresse;
+ string banniere;
+ decimal latitude;
+ decimal longitude;
+ string region;
+ long succursaleId;
+ string telephone;
+ string ville;
+ string fax;
+ string province;
+ string codePostal;
+ string email;
+ string gestionnaireDeMagasin;
+ string gestionnaireDeRegion;
+ boolean livraison;
+ string service;
+ horaires horaires;
+}
+struct horaires {
+ horaire horaire;
+}
+struct horaire {
+ string dateDebut;
+ string dateFin;
+ string jourDeLaSemaine;
+ string heureOuverture;
+ string heureFermeture;
+ string dateOuvertureAffichee;
+ string dateFermetureAffichee;
+ boolean heureSpeciale;
+ string heureSpecialeTitre;
+}
+struct getProduitsParMotCleV2 {
+ string lang;
+ string motCle;
+ typeTri tri;
+ long premierIndex;
+ long maxDesResultats;
+ boolean filtreInventaire;
+}
+string typeTri
+struct getProduitsParMotCleV2Response {
+ listeProduitV2 return;
+}
+struct listeProduitV2 {
+ long nbResults;
+ produit products;
+}
+struct getDetailProduitParCUPV2Response {
+ detailProduitV2 return;
+}
+struct getDetailProduitV2Response {
+ detailProduitV2 return;
+}
+struct detailProduitV2 {
+ string millesimeDeguste;
+ string urlProduit;
+ attributeV2 listeAttributs;
+}
+struct attributeV2 {
+ typeAttributV2 typeAttribut;
+ string value;
+}
+string typeAttributV2
+struct getDetailProduitParCUPV2 {
+ string lang;
+ string cup;
+}
+struct getDetailProduitV2 {
+ string lang;
+ long produitId;
+}
+struct getProduitsV2 {
+ string lang;
+ string categorie1;
+ string categorie2;
+ string categorie3;
+ string pays;
+ string region;
+ string pastille;
+ string prix;
+ boolean enRabais;
+ string cepage;
+ typeTri tri;
+ long premierIndex;
+ long maxDesResultats;
+}
+struct getProduitsV2Response {
+ listeProduitV2 return;
+}
+struct getProduitsParAccordV2 {
+ string lang;
+ string familleAccordArray;
+ typeTri tri;
+ long premierIndex;
+ long maxResults;
+}
+struct getProduitsParAccordV2Response {
+ listeProduitV2 return;
+}
+struct getRecettesV2 {
+ string lang;
+ string typePlat;
+ string ingredientPrincipal;
+ string accompagnement;
+ string modeCuisson;
+ long premierIndex;
+ long maxResults;
+}
+struct getRecettesParAccordV2 {
+ string lang;
+ string familleAccordArray;
+ long premierIndex;
+ long maxResults;
+}
+struct getRecettesV2Response {
+ listeRecetteV2 return;
+}
+struct getRecettesParAccordV2Response {
+ listeRecetteV2 return;
+}
+struct listeRecetteV2 {
+ long nbResults;
+ recette recipes;
+}
+struct getDetailProduitParCUPV3Response {
+ detailProduitV3 return;
+}
+struct getDetailProduitV3Response {
+ detailProduitV3 return;
+}
+struct cepageDesc {
+ string value;
+ long percent;
+}
+struct attributeV3 {
+ typeAttributV3 typeAttribut;
+ string value;
+}
+string typeAttributV3
+struct detailProduitV3 {
+ string millesimeDeguste;
+ string urlProduit;
+ long limiteAchatEnLigne;
+ long qteDispoEnLigne;
+ long limiteAchatEnSuccursale;
+ boolean indDispoEnSuccursale;
+ string remarqueLivraison;
+ cepageDesc cepage;
+ attributeV3 listeAttributs;
+}
+struct getDetailProduitParCUPV3 {
+ string lang;
+ string cup;
+}
+struct getDetailProduitV3 {
+ string lang;
+ long produitId;
+}
+struct SyncGetDetailProduitDataAreaType {
+ getDetailProduit getDetailProduit;
+}
+struct SyncGetDetailProduitParCUPDataAreaType {
+ getDetailProduitParCUP getDetailProduitParCUP;
+}
+struct SyncGetDetailProduitType {
+ SyncGetDetailProduitDataAreaType DataArea;
+}
+struct SyncGetDetailProduitParCUPType {
+ SyncGetDetailProduitParCUPDataAreaType DataArea;
+}
+struct SyncGetDetailProduitParCUPResponseDataAreaType {
+ getDetailProduitParCUPResponse getDetailProduitParCUPResponse;
+}
+struct SyncGetDetailProduitParCUPResponseType {
+ SyncGetDetailProduitParCUPResponseDataAreaType DataArea;
+}
+struct SyncGetDetailProduitResponseDataAreaType {
+ getDetailProduitResponse getDetailProduitResponse;
+}
+struct SyncGetDetailProduitResponseType {
+ SyncGetDetailProduitResponseDataAreaType DataArea;
+}
+struct SyncGetDetailRecetteDataAreaType {
+ getDetailRecette getDetailRecette;
+}
+struct SyncGetDetailRecetteType {
+ SyncGetDetailRecetteDataAreaType DataArea;
+}
+struct SyncGetDetailRecetteResponseDataAreaType {
+ getDetailRecetteResponse getDetailRecetteResponse;
+}
+struct SyncGetDetailRecetteResponseType {
+ SyncGetDetailRecetteResponseDataAreaType DataArea;
+}
+struct SyncGetListeCategoriesDataAreaType {
+ getListeCategories getListeCategories;
+}
+struct SyncGetListeCategoriesType {
+ SyncGetListeCategoriesDataAreaType DataArea;
+}
+struct SyncGetListeCategoriesResponseDataAreaType {
+ getListeCategoriesResponse getListeCategoriesResponse;
+}
+struct SyncGetListeCategoriesResponseType {
+ SyncGetListeCategoriesResponseDataAreaType DataArea;
+}
+struct SyncGetListeCepagesDataAreaType {
+ getListeCepages getListeCepages;
+}
+struct SyncGetListeCepagesType {
+ SyncGetListeCepagesDataAreaType DataArea;
+}
+struct SyncGetListeCepagesResponseDataAreaType {
+ getListeCepagesResponse getListeCepagesResponse;
+}
+struct SyncGetListeCepagesResponseType {
+ SyncGetListeCepagesResponseDataAreaType DataArea;
+}
+struct SyncGetListePastillesDataAreaType {
+ getListePastilles getListePastilles;
+}
+struct SyncGetListePastillesType {
+ SyncGetListePastillesDataAreaType DataArea;
+}
+struct SyncGetListePastillesResponseDataAreaType {
+ getListePastillesResponse getListePastillesResponse;
+}
+struct SyncGetListePastillesResponseType {
+ SyncGetListePastillesResponseDataAreaType DataArea;
+}
+struct SyncGetListePaysDataAreaType {
+ getListePays getListePays;
+}
+struct SyncGetListePaysType {
+ SyncGetListePaysDataAreaType DataArea;
+}
+struct SyncGetListePaysResponseDataAreaType {
+ getListePaysResponse getListePaysResponse;
+}
+struct SyncGetListePaysResponseType {
+ SyncGetListePaysResponseDataAreaType DataArea;
+}
+struct SyncGetListePrixDataAreaType {
+ getListePrix getListePrix;
+}
+struct SyncGetListePrixType {
+ SyncGetListePrixDataAreaType DataArea;
+}
+struct SyncGetListePrixResponseDataAreaType {
+ getListePrixResponse getListePrixResponse;
+}
+struct SyncGetListePrixResponseType {
+ SyncGetListePrixResponseDataAreaType DataArea;
+}
+struct SyncGetListeTypesPlatDataAreaType {
+ getListeTypesPlat getListeTypesPlat;
+}
+struct SyncGetListeTypesPlatType {
+ SyncGetListeTypesPlatDataAreaType DataArea;
+}
+struct SyncGetListeTypesPlatResponseDataAreaType {
+ getListeTypesPlatResponse getListeTypesPlatResponse;
+}
+struct SyncGetListeTypesPlatResponseType {
+ SyncGetListeTypesPlatResponseDataAreaType DataArea;
+}
+struct SyncGetProduitsDataAreaType {
+ getProduits getProduits;
+}
+struct SyncGetProduitsType {
+ SyncGetProduitsDataAreaType DataArea;
+}
+struct SyncGetProduitsParAccordDataAreaType {
+ getProduitsParAccord getProduitsParAccord;
+}
+struct SyncGetProduitsParAccordType {
+ SyncGetProduitsParAccordDataAreaType DataArea;
+}
+struct SyncGetProduitsParAccordResponseDataAreaType {
+ getProduitsParAccordResponse getProduitsParAccordResponse;
+}
+struct SyncGetProduitsParAccordResponseType {
+ SyncGetProduitsParAccordResponseDataAreaType DataArea;
+}
+struct SyncGetProduitsParMotCleDataAreaType {
+ getProduitsParMotCle getProduitsParMotCle;
+}
+struct SyncGetProduitsParMotCleType {
+ SyncGetProduitsParMotCleDataAreaType DataArea;
+}
+struct SyncGetProduitsParMotCleResponseDataAreaType {
+ getProduitsParMotCleResponse getProduitsParMotCleResponse;
+}
+struct SyncGetProduitsParMotCleResponseType {
+ SyncGetProduitsParMotCleResponseDataAreaType DataArea;
+}
+struct SyncGetProduitsResponseDataAreaType {
+ getProduitsResponse getProduitsResponse;
+}
+struct SyncGetProduitsResponseType {
+ SyncGetProduitsResponseDataAreaType DataArea;
+}
+struct SyncGetRecettesDataAreaType {
+ getRecettes getRecettes;
+}
+struct SyncGetRecettesType {
+ SyncGetRecettesDataAreaType DataArea;
+}
+struct SyncGetRecettesParAccordDataAreaType {
+ getRecettesParAccord getRecettesParAccord;
+}
+struct SyncGetRecettesParAccordType {
+ SyncGetRecettesParAccordDataAreaType DataArea;
+}
+struct SyncGetRecettesParAccordResponseDataAreaType {
+ getRecettesParAccordResponse getRecettesParAccordResponse;
+}
+struct SyncGetRecettesParAccordResponseType {
+ SyncGetRecettesParAccordResponseDataAreaType DataArea;
+}
+struct SyncGetRecettesResponseDataAreaType {
+ getRecettesResponse getRecettesResponse;
+}
+struct SyncGetRecettesResponseType {
+ SyncGetRecettesResponseDataAreaType DataArea;
+}
+struct SyncGetSuccursalesDataAreaType {
+ getSuccursales getSuccursales;
+}
+struct SyncGetSuccursalesType {
+ SyncGetSuccursalesDataAreaType DataArea;
+}
+struct SyncGetSuccursalesResponseDataAreaType {
+ getSuccursalesResponse getSuccursalesResponse;
+}
+struct SyncGetSuccursalesResponseType {
+ SyncGetSuccursalesResponseDataAreaType DataArea;
+}
+struct SyncGetMessageDataAreaType {
+ getMessage getMessage;
+}
+struct SyncGetMessageType {
+ SyncGetMessageDataAreaType DataArea;
+}
+struct SyncGetMessageResponseDataAreaType {
+ getMessageResponse getMessageResponse;
+}
+struct SyncGetMessageResponseType {
+ SyncGetMessageResponseDataAreaType DataArea;
+}
+struct SyncGetDetailsSuccursaleDataAreaType {
+ getDetailsSuccursale getDetailsSuccursale;
+}
+struct SyncGetDetailsSuccursaleType {
+ SyncGetDetailsSuccursaleDataAreaType DataArea;
+}
+struct SyncGetDetailsSuccursaleResponseDataAreaType {
+ getDetailsSuccursaleResponse getDetailsSuccursaleResponse;
+}
+struct SyncGetDetailsSuccursaleResponseType {
+ SyncGetDetailsSuccursaleResponseDataAreaType DataArea;
+}
+struct SyncGetProduitsParMotCleV2Type {
+ SyncGetProduitsParMotCleV2DataAreaType DataArea;
+}
+struct SyncGetProduitsParMotCleV2DataAreaType {
+ getProduitsParMotCleV2 getProduitsParMotCleV2;
+}
+struct SyncGetProduitsParMotCleV2ResponseDataAreaType {
+ getProduitsParMotCleResponse getProduitsParMotCleV2Response;
+}
+struct SyncGetProduitsParMotCleV2ResponseType {
+ SyncGetProduitsParMotCleV2ResponseDataAreaType DataArea;
+}
+struct SyncGetDetailProduitParCUPV2ResponseDataAreaType {
+ getDetailProduitParCUPV2Response getDetailProduitParCUPV2Response;
+}
+struct SyncGetDetailProduitParCUPV2ResponseType {
+ SyncGetDetailProduitParCUPV2ResponseDataAreaType DataArea;
+}
+struct SyncGetDetailProduitV2ResponseDataAreaType {
+ getDetailProduitV2Response getDetailProduitV2Response;
+}
+struct SyncGetDetailProduitV2ResponseType {
+ SyncGetDetailProduitV2ResponseDataAreaType DataArea;
+}
+struct SyncGetDetailProduitV2DataAreaType {
+ getDetailProduitV2 getDetailProduitV2;
+}
+struct SyncGetDetailProduitV2Type {
+ SyncGetDetailProduitV2DataAreaType DataArea;
+}
+struct SyncGetDetailProduitParCUPV2Type {
+ SyncGetDetailProduitParCUPV2DataAreaType DataArea;
+}
+struct SyncGetDetailProduitParCUPV2DataAreaType {
+ getDetailProduitParCUPV2 getDetailProduitParCUPV2;
+}
+struct SyncGetProduitsV2DataAreaType {
+ getProduitsV2 getProduitsV2;
+}
+struct SyncGetProduitsV2Type {
+ SyncGetProduitsV2DataAreaType DataArea;
+}
+struct SyncGetProduitsV2ResponseDataAreaType {
+ getProduitsV2Response getProduitsV2Response;
+}
+struct SyncGetProduitsV2ResponseType {
+ SyncGetProduitsV2ResponseDataAreaType DataArea;
+}
+struct SyncGetProduitsParAccordV2DataAreaType {
+ getProduitsParAccordV2 getProduitsParAccordV2;
+}
+struct SyncGetProduitsParAccordV2Type {
+ SyncGetProduitsParAccordV2DataAreaType DataArea;
+}
+struct SyncGetProduitsParAccordV2ResponseDataAreaType {
+ getProduitsParAccordV2Response getProduitsParAccordV2Response;
+}
+struct SyncGetProduitsParAccordV2ResponseType {
+ SyncGetProduitsParAccordV2ResponseDataAreaType DataArea;
+}
+struct SyncGetRecettesV2DataAreaType {
+ getRecettesV2 getRecettesV2;
+}
+struct SyncGetRecettesV2Type {
+ SyncGetRecettesV2DataAreaType DataArea;
+}
+struct SyncGetRecettesParAccordV2DataAreaType {
+ getRecettesParAccordV2 getRecettesParAccordV2;
+}
+struct SyncGetRecettesParAccordV2Type {
+ SyncGetRecettesParAccordV2DataAreaType DataArea;
+}
+struct SyncGetRecettesParAccordV2ResponseDataAreaType {
+ getRecettesParAccordV2Response getRecettesParAccordV2Response;
+}
+struct SyncGetRecettesParAccordV2ResponseType {
+ SyncGetRecettesParAccordV2ResponseDataAreaType DataArea;
+}
+struct SyncGetRecettesV2ResponseDataAreaType {
+ getRecettesV2Response getRecettesV2Response;
+}
+struct SyncGetRecettesV2ResponseType {
+ SyncGetRecettesV2ResponseDataAreaType DataArea;
+}
+struct SyncGetDetailProduitParCUPV3ResponseDataAreaType {
+ getDetailProduitParCUPV3Response getDetailProduitParCUPV3Response;
+}
+struct SyncGetDetailProduitParCUPV3ResponseType {
+ SyncGetDetailProduitParCUPV3ResponseDataAreaType DataArea;
+}
+struct SyncGetDetailProduitV3ResponseDataAreaType {
+ getDetailProduitV3Response getDetailProduitV3Response;
+}
+struct SyncGetDetailProduitV3ResponseType {
+ SyncGetDetailProduitV3ResponseDataAreaType DataArea;
+}
+struct SyncGetDetailProduitV3DataAreaType {
+ getDetailProduitV3 getDetailProduitV3;
+}
+struct SyncGetDetailProduitV3Type {
+ SyncGetDetailProduitV3DataAreaType DataArea;
+}
+struct SyncGetDetailProduitParCUPV3Type {
+ SyncGetDetailProduitParCUPV3DataAreaType DataArea;
+}
+struct SyncGetDetailProduitParCUPV3DataAreaType {
+ getDetailProduitParCUPV3 getDetailProduitParCUPV3;
+}
+struct SyncGetImageURLDataAreaType {
+ getImageURL getImageURL;
+}
+struct SyncGetImageURLType {
+ SyncGetImageURLDataAreaType DataArea;
+}
+struct SyncGetImageURLResponseDataAreaType {
+ getImageURLResponse getImageURLResponse;
+}
+struct SyncGetImageURLResponseType {
+ SyncGetImageURLResponseDataAreaType DataArea;
+}
+struct SyncGetPromotionDataAreaType {
+ getPromotion getPromotion;
+}
+struct SyncGetPromotionType {
+ SyncGetPromotionDataAreaType DataArea;
+}
+struct SyncGetPromotionResponseDataAreaType {
+ getPromotionResponse getPromotionResponse;
+}
+struct SyncGetPromotionResponseType {
+ SyncGetPromotionResponseDataAreaType DataArea;
+}
+struct SyncGetLegalInfosDataAreaType {
+ getLegalInfos getLegalInfos;
+}
+struct SyncGetLegalInfosType {
+ SyncGetLegalInfosDataAreaType DataArea;
+}
+struct SyncGetLegalInfosResponseDataAreaType {
+ getLegalInfosResponse getLegalInfosResponse;
+}
+struct SyncGetLegalInfosResponseType {
+ SyncGetLegalInfosResponseDataAreaType DataArea;
+}
+214 types.
