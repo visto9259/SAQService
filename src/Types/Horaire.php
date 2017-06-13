@@ -82,5 +82,86 @@ class Horaire
       $this->heureSpeciale = $heureSpeciale;
       $this->heureSpecialeTitre = $heureSpecialeTitre;
     }
+    
+    /**
+     * Get Start Date
+     * @return string
+     */
+    public function getDateDebut()
+    {
+        return $this->dateDebut;
+    }
 
+    /**
+     * Get Finish Date
+     * @return string
+     */
+    public function getDateFin()
+    {
+        return $this->dateFin;
+    }
+
+    /**
+     * Get Day of the week
+     * @return string
+     */
+    public function getJourDeLaSemaine()
+    {
+        return $this->jourDeLaSemaine;
+    }
+    
+    /**
+     * Get Opening hour
+     * @return string
+     */
+    public function getHeureOuverture()
+    {
+        return $this->heureOuverture;
+    }
+    
+    /**
+     * Get Closing hour
+     * @return string
+     */
+    public function getHeureFermeture()
+    {
+        return $this->heureFermeture;
+    }
+    
+    /**
+     * Get Special hour
+     * @return boolean
+     */
+    public function getHeureSpeciale()
+    {
+        return $this->heureSpeciale;
+    }
+    
+    /**
+     * Get Special Hour name
+     * @return string
+     */
+    public function getHeureSpecialeTitre()
+    {
+        return $this->heureSpecialeTitre;
+    }
+    
+    /**
+     * Get Opening Date
+     * @return string
+     */
+    public function getDateOuvertureAffichee()
+    {
+        return $this->dateOuvertureAffichee;
+    }
+    
+    /**
+     * Get Closing Date
+     * @return string
+     */
+    public function getDateFermetureAffichee()
+    {
+        return $this->dateFermetureAffichee;
+    }
+    
 }

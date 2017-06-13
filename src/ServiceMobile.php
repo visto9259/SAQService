@@ -523,6 +523,12 @@ class ServiceMobile extends \SoapClient
         return $response->getDataArea()->getListeCategoriesResponse()->getCategories();
     }
     
+    /**
+     * Implements the 'getSuccursales' method
+     * @param string $arg0
+     * @param string $arg1
+     * @return boolean|unknown
+     */
     public function getSuccursales($arg0, $arg1)
     {
         $arguments = new SyncGetSuccursalesType(
@@ -535,6 +541,20 @@ class ServiceMobile extends \SoapClient
         
         return $response->getDataArea()->getSuccursalesResponse()->getSuccursales();
     }
+    
+    public function getDetailsSuccursale($lang, $id)
+    {
+        $arguments = new SyncGetDetailsSuccursaleType(
+            new SyncGetDetailsSuccursaleDataAreaType(
+                new GetDetailsSuccursale($lang, $id)));
+        
+        $response = $this->__call('getDetailsSuccursale', [$arguments]);
+        
+        if(!$response) return false;
+        
+        return $response->getDataArea()->getDetailsSuccursaleResponse()->getDetailsSuccursale();
+    }
+    
     
     /**
      * Default function for undefined methods

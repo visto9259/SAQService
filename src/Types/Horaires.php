@@ -18,5 +18,14 @@ class Horaires
     {
       $this->horaire = $horaire;
     }
+    
+    /**
+     * Returns the Store hours
+     * @return \SAQService\Types\horaire
+     */
+    public function getHoraire()
+    {
+        return $this->horaire;
+    }
 
 }

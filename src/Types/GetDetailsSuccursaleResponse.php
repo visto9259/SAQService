@@ -18,5 +18,14 @@ class GetDetailsSuccursaleResponse
     {
       $this->return = $return;
     }
+    
+    /**
+     * Returns the DetailsSuccursale data
+     * @return \SAQService\Types\DetailsSuccursale
+     */
+    public function getDetailsSuccursale()
+    {
+        return $this->return;
+    }
 
 }

@@ -149,4 +149,94 @@ class DetailsSuccursale
       $this->horaires = $horaires;
     }
 
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+    
+    public function getBanniere()
+    {
+        return $this->banniere;
+    }
+    
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+    
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
+    
+    public function getRegion()
+    {
+        return $this->region;
+    }
+    
+    public function getSuccursaleId()
+    {
+        return $this->succursaleId;
+    }
+    
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+    
+    public function getVille()
+    {
+        return $this->ville;
+    }
+    
+    public function getFax()
+    {
+        return $this->fax;
+    }
+    
+    public function getProvince()
+    {
+        return $this->province;
+    }
+    
+    public function getCodePostal()
+    {
+        return $this->codePostal;
+    }
+    
+    public function getEmail()
+    {
+        return $this->email;
+    }
+    
+    public function getGestionnaireDeMagasin()
+    {
+        return $this->gestionnaireDeMagasin;
+    }
+    
+    public function getGestionnaireDeRegion()
+    {
+        return $this->gestionnaireDeRegion;
+    }
+    
+    public function getLivraison()
+    {
+        return $this->livraison;
+    }
+    
+    public function getService()
+    {
+        return $this->service;
+    }
+    
+    public function getHoraires()
+    {
+        return $this->horaires;
+    }
+    
+    
+    
+    
+    
+    
 }
