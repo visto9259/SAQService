@@ -472,9 +472,9 @@ class ServiceMobile extends \SoapClient
      * @param TypeTri $tri
      * @param number $premierIndex
      * @param number $maxDesResultats
-     * @return boolean|unknown
+     * @return boolean|ListeProduitV2
      */
-    public function getProduitsV2($lang = 'Fr', $categorie1 = null, $categorie2 = null, $categorie3 = null, $pays = null , $region = null, $pastille = null, $prix = null, $enRabais = null, $cepage = null, $tri = null, $premierIndex = 0, $maxDesResultats = 10)
+    public function getProduitsV2($lang, $categorie1, $categorie2 , $categorie3 , $pays , $region , $pastille , $prix , $enRabais , $cepage , $tri , $premierIndex , $maxDesResultats)
     {
         $getProduitsV2 = new GetProduitsV2($lang, $categorie1, $categorie2, $categorie3, $pays, $region, $pastille, $prix, $enRabais, $cepage, $tri, $premierIndex, $maxDesResultats);
         $dataArea = new SyncGetProduitsV2DataAreaType($getProduitsV2);
