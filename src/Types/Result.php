@@ -35,11 +35,47 @@ class Result
      * @param string $partNumber
      * @access public
      */
-    public function __construct($description, $id, $partNumber)
+    public function __construct($description, $familleAccordList, $id, $partNumber)
     {
       $this->description = $description;
+      $this->familleAccordList = $familleAccordList;
       $this->id = $id;
       $this->partNumber = $partNumber;
     }
 
+    /**
+     * Return Description
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    
+    /**
+     * Return FamilleAccordList array
+     * @return \SAQService\Types\string[]
+     */
+    public function getFamilleAccordList()
+    {
+        return $this->familleAccordList;
+    }
+    
+    /**
+     * Return Id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+    
+    /**
+     * Return PartNumber
+     * @return string
+     */
+    public function getPartNumber()
+    {
+        return $this->partNumber;
+    }
 }

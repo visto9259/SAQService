@@ -18,5 +18,10 @@ class SyncGetDetailProduitParCUPV2ResponseDataAreaType
     {
       $this->getDetailProduitParCUPV2Response = $getDetailProduitParCUPV2Response;
     }
+    
+    public function getDetailProduitParCUPV2Response()
+    {
+        return $this->getDetailProduitParCUPV2Response;
+    }
 
 }

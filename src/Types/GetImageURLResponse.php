@@ -19,5 +19,10 @@ class GetImageURLResponse
     {
       $this->imageURL = $imageURL;
     }
+    
+    public function getImageUrl()
+    {
+        return $this->imageURL;
+    }
 
 }

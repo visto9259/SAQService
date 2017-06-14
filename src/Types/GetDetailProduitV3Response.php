@@ -19,5 +19,10 @@ class GetDetailProduitV3Response
     {
       $this->return = $return;
     }
+    
+    public function getProduitsV3()
+    {
+        return $this->return;
+    }
 
 }

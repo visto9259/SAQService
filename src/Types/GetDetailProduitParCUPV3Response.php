@@ -19,5 +19,14 @@ class GetDetailProduitParCUPV3Response
     {
       $this->return = $return;
     }
+    
+    /**
+     * Returns DetailProduitV3
+     * @return \SAQService\Types\DetailProduitV3
+     */
+    public function getDetailProduitV3()
+    {
+        return $this->return;
+    }
 
 }

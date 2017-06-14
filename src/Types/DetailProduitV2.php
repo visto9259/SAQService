@@ -25,6 +25,7 @@ class DetailProduitV2 extends Produit
 
     /**
      * @param string $description
+     * @param string $familleAccordListe
      * @param int $id
      * @param string $partNumber
      * @param string $format
@@ -44,11 +45,29 @@ class DetailProduitV2 extends Produit
      * @param string $urlProduit
      * @access public
      */
-    public function __construct($description, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux, $millesimeDeguste, $urlProduit)
+    public function __construct($description, $familleAccordListe, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux, $millesimeDeguste, $urlProduit)
     {
-      parent::__construct($description, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux);
-      $this->millesimeDeguste = $millesimeDeguste;
+        parent::__construct($description, $familleAccordListe, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux);
+        $this->millesimeDeguste = $millesimeDeguste;
       $this->urlProduit = $urlProduit;
     }
 
+    /**
+     * Return MillesimeDeguste
+     * @return string
+     */
+    public function getMillesimeDeguste()
+    {
+        return $this->millesimeDeguste;
+    }
+    
+    /**
+     * Return UrlProduit
+     * @return string
+     */
+    public function getUrlProduit()
+    {
+        return $this->urlProduit;
+    }
 }
+

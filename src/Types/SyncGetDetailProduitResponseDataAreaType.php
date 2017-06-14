@@ -18,5 +18,10 @@ class SyncGetDetailProduitResponseDataAreaType
     {
       $this->getDetailProduitResponse = $getDetailProduitResponse;
     }
+    
+    public function getDetailProduitResponse()
+    {
+        return $this->getDetailProduitResponse;
+    }
 
 }

@@ -27,5 +27,23 @@ class AttributeV2
       $this->typeAttribut = $typeAttribut;
       $this->value = $value;
     }
+    
+    /**
+     * Return TypeAttribut
+     * @return \SAQService\Types\typeAttributV2
+     */
+    public function getTypeAttribut()
+    {
+        return $this->typeAttribut;
+    }
+    
+    /**
+     * Return Value
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
 
 }

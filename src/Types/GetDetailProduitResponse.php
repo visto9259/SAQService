@@ -20,4 +20,8 @@ class GetDetailProduitResponse
       $this->return = $return;
     }
 
+    public function getDetailProduit()
+    {
+        return $this->return;
+    }
 }

@@ -19,5 +19,10 @@ class GetDetailProduitParCUPV2Response
     {
       $this->return = $return;
     }
+    
+    public function getDetailProduitV2()
+    {
+        return $this->return;
+    }
 
 }

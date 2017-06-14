@@ -20,4 +20,8 @@ class GetDetailProduitParCUPResponse
       $this->return = $return;
     }
 
+    public function getDetailProduit()
+    {
+        return $this->return;
+    }
 }

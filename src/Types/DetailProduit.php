@@ -13,6 +13,7 @@ class DetailProduit extends Produit
 
     /**
      * @param string $description
+     * @param string $familleAccordListe
      * @param int $id
      * @param string $partNumber
      * @param string $format
@@ -30,9 +31,18 @@ class DetailProduit extends Produit
      * @param string $urlTypeSpiritueux
      * @access public
      */
-    public function __construct($description, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux)
+    public function __construct($description, $familleAccordListe, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux)
     {
-      parent::__construct($description, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux);
+      parent::__construct($description, $familleAccordListe, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux);
+    }
+    
+    /**
+     * Return List of attibutes
+     * @return \SAQService\Types\attribute[]
+     */
+    public function getListeAttributs()
+    {
+        return $this->listeAttributs;
     }
 
 }

@@ -102,9 +102,9 @@ class Produit extends Result
      * @param string $urlTypeSpiritueux
      * @access public
      */
-    public function __construct($description, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux)
+    public function __construct($description, $familleAccordListe, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux)
     {
-      parent::__construct($description, $id, $partNumber);
+      parent::__construct($description, $familleAccordListe, $id, $partNumber);
       $this->format = $format;
       $this->identiteProduit = $identiteProduit;
       $this->millesime = $millesime;
@@ -120,6 +120,121 @@ class Produit extends Result
       $this->urlTypeSpiritueux = $urlTypeSpiritueux;
     }
     
+    /**
+     * Return Format
+     * @return string
+     */
+    public function getFormat()
+    {
+        return $this->format;
+    }
    
-
+    /**
+     * return IdentiteProduit
+     * @return string
+     */
+    public function getIdentiteProduit()
+    {
+        return $this->identiteProduit;
+    }
+    
+    /**
+     * Return Millesime
+     * @return string
+     */
+    public function getMillesime()
+    {
+        return $this->millesime;
+    }
+    
+    /**
+     * Return PastilleGout
+     * @return string
+     */
+    public function getPastilleGout()
+    {
+        return $this->pastilleGout;
+    }
+    
+    /**
+     * Return Pays
+     * @return string
+     */
+    public function getPays()
+    {
+        return $this->pays;
+    }
+    
+    /**
+     * Return Prix
+     * @return number
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+    
+    /**
+     * Return PrixReduit
+     * @return number
+     */
+    public function getPrixReduit()
+    {
+        return $this->prixReduit;
+    }
+    
+    /**
+     * Return UrlPastille
+     * @return string
+     */
+    public function getUrlPastille()
+    {
+        return $this->urlPastille;
+    }
+    
+    /**
+     * Return QuantiteParEmballage
+     * @return string
+     */
+    public function getQuantiteParEmballage()
+    {
+        return $this->quantiteParEmballage;
+    }
+    
+    /**
+     * Return Aromate
+     * @return string
+     */
+    public function getAromate()
+    {
+        return $this->aromate;
+    }
+    
+    /**
+     * Return UrlAromate
+     * @return string
+     */
+    public function getUrlAromate()
+    {
+        return $this->urlAromate;
+    }
+    
+    /**
+     * Return TypeSpiritueux
+     * @return string
+     */
+    public function getTypeSpiritueux()
+    {
+        return $this->typeSpiritueux;
+    }
+    
+    /**
+     * Return UrlTypeSpiritueux
+     * @return string
+     */
+    public function getUrlTypeSpiritueux()
+    {
+        return $this->urlTypeSpiritueux;
+    }
+    
 }

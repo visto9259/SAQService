@@ -18,5 +18,10 @@ class SyncGetDetailProduitV3ResponseDataAreaType
     {
       $this->getDetailProduitV3Response = $getDetailProduitV3Response;
     }
+    
+    public function getDetailProduitV3Response()
+    {
+        return $this->getDetailProduitV3Response;
+    }
 
 }

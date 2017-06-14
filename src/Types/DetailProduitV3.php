@@ -61,6 +61,7 @@ class DetailProduitV3 extends Produit
 
     /**
      * @param string $description
+     * @param string $familleAccordListe
      * @param int $id
      * @param string $partNumber
      * @param string $format
@@ -85,9 +86,10 @@ class DetailProduitV3 extends Produit
      * @param string[] $remarqueLivraison
      * @access public
      */
-    public function __construct($description, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux, $millesimeDeguste, $urlProduit, $limiteAchatEnLigne, $qteDispoEnLigne, $limiteAchatEnSuccursale, $indDispoEnSuccursale, $remarqueLivraison)
+    
+    public function __construct($description, $familleAccordListe, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux, $millesimeDeguste, $urlProduit, $limiteAchatEnLigne, $qteDispoEnLigne, $limiteAchatEnSuccursale, $indDispoEnSuccursale, $remarqueLivraison)
     {
-      parent::__construct($description, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux);
+      parent::__construct($description, $familleAccordListe, $id, $partNumber, $format, $identiteProduit, $millesime, $pastilleGout, $pays, $prix, $prixReduit, $urlPastille, $quantiteParEmballage, $aromate, $urlAromate, $typeSpiritueux, $urlTypeSpiritueux);
       $this->millesimeDeguste = $millesimeDeguste;
       $this->urlProduit = $urlProduit;
       $this->limiteAchatEnLigne = $limiteAchatEnLigne;
@@ -96,5 +98,70 @@ class DetailProduitV3 extends Produit
       $this->indDispoEnSuccursale = $indDispoEnSuccursale;
       $this->remarqueLivraison = $remarqueLivraison;
     }
+    
+    /**
+     * Return MillesimeDeguste
+     * @return string
+     */
+    public function getMillesimeDeguste()
+    {
+        return $this->millesimeDeguste;
+    }
 
+    /**
+     * Return UrlProduit
+     * @return string
+     */
+    public function getUrlProduit()
+    {
+        return $this->urlProduit;
+    }
+    
+    /**
+     * Return LimiteAchatEnLigne
+     * @return number
+     */
+    public function getLimiteAchatEnLigne()
+    {
+        return $this->limiteAchatEnLigne;
+    }
+    
+    /**
+     * Return QteDisponibleEnLigne
+     * @return number
+     */
+    public function getQteDispoEnLigne()
+    {
+        return $this->qteDispoEnLigne;
+    }
+    
+    /**
+     * Return LimiteAchatEnSuccursale
+     * @return number
+     */
+    public function getLimiteAchatEnSuccursale()
+    {
+        return $this->limiteAchatEnSuccursale;
+    }
+    
+    /**
+     * Return IndDispEnSuccursale
+     * @return boolean
+     */
+    public function getIndDispoEnSuccursale()
+    {
+        return $this->indDispoEnSuccursale;
+    }
+    
+    /**
+     * Return RemarqueLivraison
+     * @return \SAQService\Types\string[]
+     */
+    public function getRemarqueLivraison()
+    {
+        return $this->remarqueLivraison;
+    }
+    
+    
+    
 }
