@@ -568,6 +568,19 @@ class ServiceMobile extends \SoapClient
         return $response->getDataArea()->getDetailProduitParCUPV3Response()->getDetailProduitV3();
     }
     
+    public function getDetailProduitV3($lang, $produitId)
+    {
+        $arguments = new SyncGetDetailProduitV3Type(
+            new SyncGetDetailProduitV3DataAreaType(
+                new GetDetailProduitV3($lang, $produitId)));
+        
+        $response = $this->__call('getDetailProduitV3', [$arguments]);
+        
+        if (!$response) return false;
+        
+        return $response->getDataArea()->getDetailProduitV3Response()->getDetailProduitV3();
+    }
+    
     
     /**
      * Default function for undefined methods
